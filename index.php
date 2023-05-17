@@ -13,18 +13,18 @@
         <h1>Listado de productos</h1>
         </center>
         <br>
-        <div class="contaimer">
+        <div class="container">
 
-        <a href ="productonuevo.php" class="btn btn-dark">Agregar producto</a>
+        <a href ="productonuevo.php" class="btn btn-primary">Agregar producto</a>
         <hr>
-        <table class="table">
+        <table class="table table-dark table-borderless">
             <thead>
                 <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Acciones</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Id</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Nombre</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Descripcion</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Imagen</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,14 +37,14 @@
 
                 while ($Fila = $resultado->fetch_assoc()) { ?>
 
-                <tr>
-                  <th scope="row"><?php echo $Fila['id']?></th>
-                  <td><?php echo $Fila['nombre']?></td>
-                  <td><?php echo $Fila['descripcion']?></td>
-                  <td><img src="static/gaseosa.jpg" alt=""></td>
-                  <td>
-                    <a href="" class="btn btn-warning">Editar</a>
-                    <a href="" class="btn btn-danger">Eliminar</a>
+                <tr >
+                  <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo $Fila['id']?></th>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['nombre']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['descripcion']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><img style= "width:150px ; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode($Fila['imagen'])?>"  alt=""></td>
+                  <td style="background:#6a777;text-align:center;padding:15px">
+                    <a href="editar.php?id=<?php echo $Fila["id"]?>" class="btn btn-warning">Editar</a>
+                    <a href="eliminar.php?id=<?php echo $Fila["id"]?>" class="btn btn-danger">Eliminar</a>
                   </td>
                 </tr>
                 

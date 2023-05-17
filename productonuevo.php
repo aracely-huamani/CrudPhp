@@ -27,8 +27,8 @@
             <input type="file" class="form-control" name="imagen">
         </div>
         
-        <button type="submit" class="btn btn-info">Submit</button>
-        <a href="/index.php" class="btn btn-warning">Regresar </a>
+        <button type="submit" class="btn btn-info">Enviar</button>
+        <a href="index.php" class="btn btn-warning">Regresar </a>
     </form>
     </div>  
 
