@@ -40,15 +40,15 @@
                 //while ($Fila = $resultado->fetch_assoc()) { ?>
 
                 <tr >
-                  <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo $Fila['idpaciente']?></th>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['apellidos']?></td>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['nombres']?></td>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['sexo']?></td>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['especialidad']?></td>
-                  <td style="background:#6a777;text-align:center;padding:15px"><img style= "width:150px ; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode($Fila['imagen'])?>"  alt=""></td>
+                  <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo  ['idpaciente']?></th>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo ['apellidos']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo ['nombres']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo ['sexo']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo ['especialidad']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><img style= "width:150px ; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode(['imagen'])?>"  alt=""></td>
                   <td style="background:#6a777;text-align:center;padding:15px">
-                    <a href="editar.php?idpaciente=<?php echo $Fila["idpaciente"]?>" class="btn btn-warning">Editar</a>
-                    <a href="eliminar.php?idpaciente=<?php echo $Fila["idpaciente"]?>" class="btn btn-danger">Eliminar</a>
+                    <a href="editar.php?idpaciente=<?php echo ["idpaciente"]?>" class="btn btn-warning">Editar</a>
+                    <a href="eliminar.php?idpaciente=<?php echo["idpaciente"]?>" class="btn btn-danger">Eliminar</a>
                   </td>
                 </tr>
                 
