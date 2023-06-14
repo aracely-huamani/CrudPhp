@@ -1,8 +1,8 @@
 <?php
 
-$MYSQLHOST = "containers-us-west-135.railway.app";
+$MYSQLHOST = "localhost";
 $MYSQLUSER = "root";
-$MYSQLPASSWORD= "qSrM0GEuMhptsib4Ntrb";
-$MYSQLDATABASE="railway";
-$MYSQLPORT = "6624";
+$MYSQLPASSWORD= "";
+$MYSQLDATABASE="rpacientesdb";
+
 $conexion = mysqli_connect($MYSQLHOST,$MYSQLUSER,$MYSQLPASSWORD,$MYSQLDATABASE);
