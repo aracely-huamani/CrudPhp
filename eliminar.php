@@ -1,8 +1,8 @@
 <?php
     include "Config/conexion.php";
 
-    $id=$_REQUEST['id'];
-    $sql= "DELETE FROM producto WHERE id = $id";
+    $id=$_REQUEST['idpaciente'];
+    $sql= "DELETE FROM paciente WHERE idpaciente = $id";
 
     $resultado = $conexion -> query($sql);
 

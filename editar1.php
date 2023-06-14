@@ -2,16 +2,20 @@
 
 include "Config/conexion.php";
 
-$id = $_REQUEST['idEditar'];
+$idpaciente = $_REQUEST['idEditar'];
 
+$apellido = $_POST['apellidopr'];
 $nombre = $_POST['nombrepr'];
-$descripcion = $_POST['descripcionpr'];
+$sexo = $_POST['sexopr'];
+$especialidad = $_POST['especialidadpr'];
 $imagen=addslashes(file_get_contents($_FILES['imagenpr']['tmp_name']));
 
-$sql = "UPDATE producto SET
-nombre= '$nombre',
-descripcion = '$descripcion',
-imagen = '$imagen' WHERE id = $id";
+$sql = "UPDATE paciente SET
+apellidos='$apellido',
+nombres = '$nombre',
+sexo='$sexo',
+especialidad='$especialidad',
+imagen = '$imagen' WHERE idpaciente = $idpaciente";
 
 $resultado = $conexion->query($sql);
 

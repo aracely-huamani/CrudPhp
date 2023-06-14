@@ -3,6 +3,6 @@
 $Server = "localhost";
 $user = "root";
 $pass= "";
-$db="productosdb";
+$db="pacientesdb";
 
 $conexion = mysqli_connect($Server,$user,$pass,$db);

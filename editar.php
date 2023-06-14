@@ -10,9 +10,9 @@
     <?php
 
     include "Config/conexion.php";
-    $id=$_REQUEST['id'];
+    $id=$_REQUEST['idpaciente'];
 
-    $sql ="SELECT * FROM producto WHERE id=$id";
+    $sql ="SELECT * FROM paciente WHERE idpaciente=$id";
     $resultado = $conexion->query($sql);
 
     $Fila = $resultado->fetch_assoc();
@@ -20,21 +20,36 @@
     ?>
     <div class="container">
         <br>
-        <h1>Modificar producto</h1>
+        <h1>Modificar paciente</h1><br>
     
-    <form action="editar1.php?idEditar=<?php echo $Fila["id"]?>" method="POST" enctype="multipart/form-data">
+    <form action="editar1.php?idEditar=<?php echo $Fila["idpaciente"]?>" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="nombrepr" value="<?php echo $Fila['nombre']?>">
+            <label for="exampleInputEmail1" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="apellidopr" value="<?php echo $Fila['apellidos']?>">
         
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" name="descripcionpr" value="<?php echo $Fila['descripcion']?>">
+            <label for="exampleInputEmail1" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nombrepr" value="<?php echo $Fila['nombres']?>">
+        
         </div>
-
-        <td style="background:#6a777;text-align:center;padding:15px"><img style= "width:150px ; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode($Fila['imagen'])?>"  alt=""></td>
-
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Sexo</label>
+            <input type="text" class="form-control" name="sexopr" value="<?php echo $Fila['sexo']?>">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Especialidad</label><br>
+            <select name="especialidadpr" id="lang" value="<?php echo $Fila['especialidad']?>">
+                  <option value="Medicina general">Medicina general</option>
+                  <option value="Ginecologia">Ginecologia</option>
+                  <option value="Obstetricia">Obstetricia</option>
+                  <option value="Pediatria">Pediatria</option>
+                  <option value="Cardiologia">Cardiologia</option>
+                  <option value="Traumatologia">Traumatologia</option>
+                  <option value="Oftamologia">Oftamologia</option>
+                  <option value="Neumologia">Neumologia</option>
+            </select>
+        </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Imagen</label>
             <input type="file" class="form-control" name="imagenpr">

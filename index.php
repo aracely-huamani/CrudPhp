@@ -10,20 +10,22 @@
     <div class="container">
         <br>
         <center >
-        <h1>Listado de productos</h1>
+        <h1>Listado de pacientes</h1>
         </center>
         <br>
         <div class="container">
 
-        <a href ="productonuevo.php" class="btn btn-primary">Agregar producto</a>
+        <a href ="pacientenuevo.php" class="btn btn-primary">Agregar paciente</a>
         <hr>
         <table class="table table-dark table-borderless">
             <thead>
                 <tr>
                 <th style="background:#464e4e;text-align:center"scope="col">Id</th>
-                <th style="background:#464e4e;text-align:center"scope="col">Nombre</th>
-                <th style="background:#464e4e;text-align:center"scope="col">Descripcion</th>
-                <th style="background:#464e4e;text-align:center"scope="col">Imagen</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Apellidos</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Nombres</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Sexo</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Especialidad</th>
+                <th style="background:#464e4e;text-align:center"scope="col">Foto</th>
                 <th style="background:#464e4e;text-align:center"scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -32,19 +34,21 @@
 
                 include "Config/conexion.php";
 
-                $Sql= "SELECT * FROM producto ";
+                $Sql= "SELECT * FROM paciente ";
                 $resultado = $conexion->query($Sql);
 
                 while ($Fila = $resultado->fetch_assoc()) { ?>
 
                 <tr >
-                  <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo $Fila['id']?></th>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['nombre']?></td>
-                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['descripcion']?></td>
+                  <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo $Fila['idpaciente']?></th>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['apellidos']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['nombres']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['sexo']?></td>
+                  <td style="background:#6a777;text-align:center;padding:15px"><?php echo $Fila['especialidad']?></td>
                   <td style="background:#6a777;text-align:center;padding:15px"><img style= "width:150px ; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode($Fila['imagen'])?>"  alt=""></td>
                   <td style="background:#6a777;text-align:center;padding:15px">
-                    <a href="editar.php?id=<?php echo $Fila["id"]?>" class="btn btn-warning">Editar</a>
-                    <a href="eliminar.php?id=<?php echo $Fila["id"]?>" class="btn btn-danger">Eliminar</a>
+                    <a href="editar.php?idpaciente=<?php echo $Fila["idpaciente"]?>" class="btn btn-warning">Editar</a>
+                    <a href="eliminar.php?idpaciente=<?php echo $Fila["idpaciente"]?>" class="btn btn-danger">Eliminar</a>
                   </td>
                 </tr>
                 
