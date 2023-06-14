@@ -35,9 +35,9 @@
                 //include "Config/conexion.php";
 
                 $Sql= "SELECT * FROM paciente ";
-                $resultado = $conexion->query($Sql);
+                //$resultado = $conexion->query($Sql);
 
-                while ($Fila = $resultado->fetch_assoc()) { ?>
+                //while ($Fila = $resultado->fetch_assoc()) { ?>
 
                 <tr >
                   <th style="background:#6a777;text-align:center;padding:15px" scope="row"><?php echo $Fila['idpaciente']?></th>
@@ -53,7 +53,7 @@
                 </tr>
                 
             </tbody>
-         <?php } ?>
+        <?php //} ?>
         </table>
 
     </div>
