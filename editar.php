@@ -9,7 +9,7 @@
   <body>
     <?php
 
-    include "Config/conexion.php";
+    //include "Config/conexion.php";
     $id=$_REQUEST['idpaciente'];
 
     $sql ="SELECT * FROM paciente WHERE idpaciente=$id";

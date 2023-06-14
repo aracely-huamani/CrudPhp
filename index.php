@@ -32,7 +32,7 @@
             <tbody>
               <?php
 
-                include "Config/conexion.php";
+                //include "Config/conexion.php";
 
                 $Sql= "SELECT * FROM paciente ";
                 $resultado = $conexion->query($Sql);
