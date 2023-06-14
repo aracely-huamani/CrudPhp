@@ -7,7 +7,7 @@
     $especialidad = $_POST["especialidad"];
     $imagen=addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-    $sql = " INSERT INTO paciente (apellidos,nombres,sexo,especialidad,imagen) VALUES ('$apellidos','$nombres','$sexo','$especialidad','$imagen')";
+    $sql = " INSERT INTO paciente (apellidos,nombres,sexo,especialidad) VALUES ('$apellidos','$nombres','$sexo','$especialidad')";
 
     $resultado = $conexion->query($sql);
 
