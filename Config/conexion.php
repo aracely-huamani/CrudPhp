@@ -1,9 +1,8 @@
 <?php
 
-$MYSQLHOST =$_ENV["$MYSQLHOST"];
-$MYSQLUSER =$_ENV["$MYSQLUSER"];
-$MYSQLPASSWORD=$_ENV["$MYSQLPASSWORD"];
-$MYSQLDATABASE=$_ENV["$MYSQLDATABASE"];
-$MYSQLPORT=$_ENV["$MYSQLPORT"];
+$Server = "localhost";
+$user = "root";
+$pass= "";
+$db="pacientesdb";
 
-$conexion = mysqli_connect("$MYSQLHOST","$MYSQLUSER","$MYSQLPASSWORD","$MYSQLDATABASE","$MYSQLPORT");
+$conexion = mysqli_connect($Server,$user,$pass,$db);
