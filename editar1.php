@@ -11,11 +11,11 @@ $especialidad = $_POST['especialidadpr'];
 //$imagen=addslashes(file_get_contents($_FILES['imagenpr']['tmp_name']));
 
 $sql = "UPDATE paciente SET
-apellidos='$apellido',
-nombres = '$nombre',
-sexo='$sexo',
-especialidad='$especialidad',
- WHERE idpaciente = $idpaciente";
+apellidos=`$apellido`,
+nombres = `$nombre`,
+sexo=`$sexo`,
+especialidad=`$especialidad`
+WHERE idpaciente = $idpaciente ";
 
 $resultado = $conexion->query($sql);
 
