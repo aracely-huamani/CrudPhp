@@ -32,10 +32,10 @@
             <tbody>
               <?php
 
-                //include "Config/conexion.php";
+                include "Config/conexion.php";
 
                 $Sql= "SELECT * FROM paciente ";
-                //$resultado = $conexion->query($Sql);
+                $resultado = $conexion->query($Sql);
 
                 while ($Fila = $resultado->fetch_assoc()) { ?>
 
